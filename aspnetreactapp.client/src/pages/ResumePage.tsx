@@ -23,7 +23,7 @@ const skillLogos = {
 };
 
 const ResumePage: React.FC = () => {
-  const [resumeInfo, setResumeInfo] = useState<ResumeInfo>(resumeInfoData);
+  const [resumeInfo, _] = useState<ResumeInfo>(resumeInfoData);
   return (
     <div className="w-full flex flex-wrap gap-y-5">
       <>
@@ -106,7 +106,7 @@ const ResumePage: React.FC = () => {
                   >
                     <div className="w-full">
                       <img
-                        src={skillLogos[skill.icon]}
+                        src={skillLogos[skill.icon as keyof typeof skillLogos]}
                         alt={skill.name}
                         className="w-[2.5rem] h-[2.5rem]"
                       />
@@ -129,7 +129,7 @@ const ResumePage: React.FC = () => {
                   >
                     <div className="w-full">
                       <img
-                        src={skillLogos[skill.icon]}
+                        src={skillLogos[skill.icon as keyof typeof skillLogos]}
                         alt={skill.name}
                         className="w-[2.5rem] h-[2.5rem]"
                       />

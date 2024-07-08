@@ -14,7 +14,7 @@ const baseFolder =
 const certificateArg = process.argv
   .map((arg) => arg.match(/--name=(?<value>.+)/i))
   .filter(Boolean)[0];
-const certificateName = certificateArg
+const certificateName = certificateArg?.groups
   ? certificateArg.groups.value
   : "aspnetreactapp.client";
 

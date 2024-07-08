@@ -1,4 +1,4 @@
-export interface resumeInfo {
+export interface ResumeInfo {
   lastName: string;
   firstName: string;
   dateOfBirth: string;
