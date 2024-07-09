@@ -24,7 +24,7 @@ const PhotoBox: React.FC<PhotoBoxProps> = ({ photoSources }) => {
     <div className="relative w-[32rem] h-[18rem]">
       <FontAwesomeIcon
         icon={faAngleLeft}
-        className="cursor-pointer h-10 z-[100] absolute left-[-2rem] top-[50%] transform -translate-y-1/2"
+        className="cursor-pointer h-10 z-[100] absolute left-[-2rem] top-[50%] -translate-y-1/2"
         onClick={() => handleSetIndex(-1)}
       />
 
@@ -37,7 +37,7 @@ const PhotoBox: React.FC<PhotoBoxProps> = ({ photoSources }) => {
       />
       <FontAwesomeIcon
         icon={faAngleRight}
-        className="cursor-pointer h-10 z-[100] absolute right-[-2rem] top-[50%] transform -translate-y-1/2"
+        className="cursor-pointer h-10 z-[100] absolute right-[-2rem] top-[50%] -translate-y-1/2"
         onClick={() => handleSetIndex(1)}
       />
     </div>

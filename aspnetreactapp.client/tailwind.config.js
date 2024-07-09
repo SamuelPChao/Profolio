@@ -4,6 +4,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      transitionProperty: {
+        opacity: "opacity",
+      },
+      transitionDuration: {
+        500: "500ms",
+        1000: "1000ms",
+      },
+      transitionTimingFunction: {
+        "in-out": "ease-in-out",
+      },
       height: {
         15: "3.75rem",
         25: "6.25rem",
@@ -27,6 +37,7 @@ export default {
         "fade-in": "fadeIn 1s ease-in-out forwards",
         "fade-out": "fadeOut 1s ease-in-out forwards",
         "fade-in-out": "fadeInOut 2s ease-in-out infinite",
+        "fade-in-out-none": "fadeInOutNone 2s ease-in-out infinite",
         "fade-in-out-drop": "fadeInOutDrop 2s ease-in-out infinite",
         "fade-in-down": "fadeInDown 1s ease-out forwards",
         "fade-display": "fadeDisplay 1.5s ease-out forwards",
@@ -47,6 +58,11 @@ export default {
           "0%": { opacity: 0.25 },
           "50%": { opacity: 1 },
           "100%": { opacity: 0.25 },
+        },
+        fadeInOutNone: {
+          "0%": { opacity: 0 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0 },
         },
         fadeInOutDrop: {
           "0%": { opacity: 0.25, transform: "translateY(-25%)" },
@@ -83,6 +99,16 @@ export default {
         },
         { values: theme("wordSpacing") }
       );
+      const newUtilities = {
+        ".hide-scrollbar": {
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      };
+      addUtilities(newUtilities);
     },
   ],
 };
