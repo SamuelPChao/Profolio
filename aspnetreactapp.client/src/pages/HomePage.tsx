@@ -50,7 +50,12 @@ const HomePage: React.FC = () => {
       ref={containerRef}
       className="h-[calc(100vh-6rem)] overflow-y-auto hide-scrollbar"
     >
-      <div className={`h-[${text.length}000%] relative`}>
+      <div
+        className={`relative`}
+        style={{
+          height: text.length * 1000 + "%",
+        }}
+      >
         <h1 className="w-full text-4xl font-bold sticky top-1/2 -translate-y-1/2 pt-4 text-center word-spacing-[1rem] tracking-widest">
           {/* {showText.split("").map((char, index) => (
             <>{index < visibleChars && <span key={index}>{char}</span>}</>
