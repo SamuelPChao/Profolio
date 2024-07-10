@@ -1,5 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-const text = ["This Is Samuel Chao... Welcome...", "I am a Web Developer..."];
+const text = [
+  "This Is Samuel Chao... Welcome...",
+  "I am a Web Developer...",
+  "Hahaha...",
+  "The End......",
+];
 
 const HomePage: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
