@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import AppLayout from "./components/AppLayout";
 import ResumePage from "./pages/ResumePage";
 import ProjectPage from "./pages/ProjectPage";
-import TestPage from "./pages/TestPage";
+// import TestPage from "./pages/TestPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 export const PageRoutes = [
   {
@@ -33,11 +33,11 @@ export const PageRoutes = [
       },
     ],
   },
-  {
-    path: "/test",
-    element: <TestPage />,
-    name: "Test",
-  },
+  // {
+  //   path: "/test",
+  //   element: <TestPage />,
+  //   name: "Test",
+  // },
 ];
 const App = () => {
   const routes = [

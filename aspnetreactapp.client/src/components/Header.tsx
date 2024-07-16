@@ -26,9 +26,6 @@ const Header: React.FC = () => {
             );
           })}
         </div>
-        <div className="flex">
-          <h3 className="cursor-pointer">104</h3>
-        </div>
       </div>
     </div>
   );

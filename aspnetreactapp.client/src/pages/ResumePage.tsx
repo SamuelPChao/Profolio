@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 import profolio_protrait from "../assets/img/portrait.jpg";
 import resumeInfoData from "../data/resumeInfo";
-import {
-  type ResumeInfo,
-  type WorkExperience,
-  type DevelopmentSkill,
-} from "../data/resumeInfo";
+import { type ResumeInfo, type WorkExperience } from "../data/resumeInfo";
 import { Education } from "../data/resumeInfo";
 import reactLogo from "../assets/img/react.svg";
 import typescriptLogo from "../assets/img/typescript.svg";
 import javascriptLogo from "../assets/img/javascript.svg";
+import tailwindLogo from "../assets/img/tailwind.svg";
+import scssLogo from "../assets/img/sass.svg";
 import aspnetLogo from "../assets/img/aspnet.svg";
 import sqlLogo from "../assets/img/sql.svg";
 import SectionTitle from "../components/SectionTitle";
+import SkillTable from "../components/SkillTable";
 
 const skillLogos = {
   react: reactLogo,
   typescript: typescriptLogo,
   javascript: javascriptLogo,
+  tailwind: tailwindLogo,
+  scss: scssLogo,
   aspnet: aspnetLogo,
   sql: sqlLogo,
 };
@@ -96,51 +97,19 @@ const ResumePage: React.FC = () => {
 
         <div className="w-full flex flex-wrap gap-y-5">
           <div className="w-full grid grid-cols-2 gap-x-5">
-            <div className="w-full flex flex-wrap gap-y-5 bg-black-1 rounded py-[1rem] px-[1rem]">
+            <div className="w-full h-fit flex flex-wrap gap-y-5 bg-black-1 rounded py-[1rem] px-[1rem]">
               <h3 className="w-fit border-b border-solid py-[0.25rem]">前端</h3>
-              {resumeInfo.developmentSkills.frontEnd.map(
-                (skill: DevelopmentSkill, index: number) => (
-                  <div
-                    key={index}
-                    className="w-full grid grid-cols-[1fr,2fr,2fr] items-center gap-x-5"
-                  >
-                    <div className="w-full">
-                      <img
-                        src={skillLogos[skill.icon as keyof typeof skillLogos]}
-                        alt={skill.name}
-                        className="w-[2.5rem] h-[2.5rem]"
-                      />
-                    </div>
-                    <span className="tracking-widest word-spacing-xl">
-                      {skill.name}
-                    </span>
-                    <span>{skill.level}</span>
-                  </div>
-                )
-              )}
+              <SkillTable
+                skillList={resumeInfo.developmentSkills.frontEnd}
+                skillLogos={skillLogos}
+              />
             </div>
             <div className="w-full h-fit flex flex-wrap gap-y-5 bg-black-1 rounded py-[1rem] px-[1rem]">
               <h3 className="w-fit border-b border-solid py-[0.25rem]">後端</h3>
-              {resumeInfo.developmentSkills.backEnd.map(
-                (skill: DevelopmentSkill, index: number) => (
-                  <div
-                    key={index}
-                    className="w-full grid grid-cols-[1fr,2fr,2fr] items-center gap-x-5"
-                  >
-                    <div className="w-full">
-                      <img
-                        src={skillLogos[skill.icon as keyof typeof skillLogos]}
-                        alt={skill.name}
-                        className="w-[2.5rem] h-[2.5rem]"
-                      />
-                    </div>
-                    <span className="tracking-widest word-spacing-xl">
-                      {skill.name}
-                    </span>
-                    <span>{skill.level}</span>
-                  </div>
-                )
-              )}
+              <SkillTable
+                skillList={resumeInfo.developmentSkills.backEnd}
+                skillLogos={skillLogos}
+              />
             </div>
           </div>
         </div>

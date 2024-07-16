@@ -117,6 +117,16 @@ const resumeInfo = {
         level: "熟練",
         icon: "typescript",
       },
+      {
+        name: "Tailwind",
+        level: "精通",
+        icon: "tailwind",
+      },
+      {
+        name: "SCSS",
+        level: "熟練",
+        icon: "scss",
+      },
     ],
     backEnd: [
       {
