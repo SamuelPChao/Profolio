@@ -103,7 +103,7 @@ const projectExperience: Project[] = [
     displayImg: "https://imgur.com/Mw8pyC6",
     imgSources: [
       "https://imgur.com/Mw8pyC6",
-      "https://imgur.com/SMq340S",
+      "https://imgur.com/7LscqOI",
       "https://imgur.com/hPEoYMv",
       "https://imgur.com/LrvdNNs",
       "https://imgur.com/1oUhPw2",

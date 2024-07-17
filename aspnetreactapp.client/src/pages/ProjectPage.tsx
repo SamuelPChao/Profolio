@@ -20,12 +20,17 @@ const ProjectPage: React.FC = () => {
               className="w-full h-fit cursor-pointer bg-black-1 rounded py-[1rem] px-[1rem] hover:animate-fade-in-out active:bg-white-1 active:text-[#101010]"
               onClick={() => handleSelectProject(index)}
             >
-              <img
-                className="w-full h-fit"
-                src={`${project.displayImg}.jpg`}
-                alt="圖片"
-                onLoad={handleImageLoad}
-              />
+              <div
+                className="relative w-full"
+                style={{ aspectRatio: "16 / 9" }}
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  src={`${project.displayImg}.jpg`}
+                  alt="圖片"
+                  onLoad={handleImageLoad}
+                />
+              </div>
               <h1 className="w-full text-center mt-[1rem]">{project.title}</h1>
             </div>
           </React.Fragment>

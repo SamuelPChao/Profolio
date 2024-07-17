@@ -8,6 +8,7 @@ import typescriptLogo from "../assets/img/typescript.svg";
 import javascriptLogo from "../assets/img/javascript.svg";
 import tailwindLogo from "../assets/img/tailwind.svg";
 import scssLogo from "../assets/img/sass.svg";
+import vueLogo from "../assets/img/vue.svg";
 import aspnetLogo from "../assets/img/aspnet.svg";
 import sqlLogo from "../assets/img/sql.svg";
 import SectionTitle from "../components/SectionTitle";
@@ -21,6 +22,7 @@ const skillLogos = {
   scss: scssLogo,
   aspnet: aspnetLogo,
   sql: sqlLogo,
+  vue: vueLogo,
 };
 
 const ResumePage: React.FC = () => {
