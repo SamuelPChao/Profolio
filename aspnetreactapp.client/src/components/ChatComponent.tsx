@@ -94,7 +94,7 @@ const ChatComponent: React.FC = () => {
   const [displayName, setDisplayName] = useState<string>("");
   const [isConnected, setIsConnected] = useState<boolean>(false);
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `wss://samuelpchao.azurewebsites.net/chat?displayName=${displayName}`,
+    `wss://samuelpchao.azurewebsites.net/api/chat?displayName=${displayName}`,
     {
       onOpen: () => {
         console.log("WebSocket connected");

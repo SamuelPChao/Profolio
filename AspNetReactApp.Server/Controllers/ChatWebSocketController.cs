@@ -53,7 +53,7 @@ public class ChatWebSocketController : ControllerBase
     _chatManager = chatManager;
   }
 
-  [HttpGet("/chat")]
+  [HttpGet("/api/chat")]
   public async Task Get(string displayName)
   {
     Console.WriteLine($"Received request on {HttpContext.Request.Scheme}://{HttpContext.Request.Host}{HttpContext.Request.Path}");
