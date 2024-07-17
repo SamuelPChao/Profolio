@@ -6,6 +6,7 @@ import ResumePage from "./pages/ResumePage";
 import ProjectPage from "./pages/ProjectPage";
 // import TestPage from "./pages/TestPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+import ChatPage from "./pages/ChatPage";
 export const PageRoutes = [
   {
     path: "/",
@@ -13,12 +14,12 @@ export const PageRoutes = [
     name: "Home",
   },
   {
-    path: "/resume",
+    path: "resume",
     element: <ResumePage />,
     name: "簡歷",
   },
   {
-    path: "/project",
+    path: "project",
     element: <Outlet />,
     name: "專案經驗",
     children: [
@@ -32,6 +33,11 @@ export const PageRoutes = [
         name: "專案資訊",
       },
     ],
+  },
+  {
+    path: "chat",
+    element: <ChatPage />,
+    name: "聊天室",
   },
   // {
   //   path: "/test",
