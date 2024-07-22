@@ -95,7 +95,7 @@ const resumeInfo = {
     {
       location: "臺北市",
       company: "智域國際",
-      position: "網頁工程師",
+      position: "前端工程師",
       date: "2023/08-迄今",
     },
   ],
