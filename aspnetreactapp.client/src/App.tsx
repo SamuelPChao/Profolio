@@ -34,11 +34,11 @@ export const PageRoutes = [
       },
     ],
   },
-  {
-    path: "chat",
-    element: <ChatPage />,
-    name: "聊天室",
-  },
+  // {
+  //   path: "chat",
+  //   element: <ChatPage />,
+  //   name: "聊天室",
+  // },
   // {
   //   path: "/test",
   //   element: <TestPage />,
