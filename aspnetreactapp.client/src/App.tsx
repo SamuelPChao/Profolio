@@ -6,7 +6,7 @@ import ResumePage from "./pages/ResumePage";
 import ProjectPage from "./pages/ProjectPage";
 // import TestPage from "./pages/TestPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
-import ChatPage from "./pages/ChatPage";
+//import ChatPage from "./pages/ChatPage";
 export const PageRoutes = [
   {
     path: "/",
